@@ -8,7 +8,7 @@ jobs:
      runs-on: ubuntu-latest
      steps:
 
-     - name: Checkout Repo
+     - name: Checkout
        uses: actions/checkout@V4
 
      - name: List Files
