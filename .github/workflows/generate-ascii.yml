@@ -4,17 +4,20 @@ on:
   push
 
 jobs:
-  ascii_job:  
+  ascii_job:
     runs-on: ubuntu-latest
 
     steps:
-    - name: Checkout
-      uses: actions/checkout@v4   
+    - name: Checkout code
+      uses: actions/checkout@v4
 
-    - name: List Files
+    - name: List files (debug)
       run: ls -ltra
 
-    - name: Executing Shell Script
+    - name: Find script file (debug)
+      run: find . -name "ascii-script.sh"
+
+    - name: Run ascii-script.sh
       run: |
         chmod +x ascii-script.sh
         ./ascii-script.sh
