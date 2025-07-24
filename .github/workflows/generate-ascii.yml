@@ -4,17 +4,17 @@ on:
   push
 
 jobs:
-   ascii_job:
-     runs-on: ubuntu-latest
-     steps:
+  ascii_job:  
+    runs-on: ubuntu-latest
 
-     - name: Checkout
-       uses: actions/checkout@V4
+    steps:
+    - name: Checkout
+      uses: actions/checkout@v4   
 
-     - name: List Files
-       run: ls -ltra
+    - name: List Files
+      run: ls -ltra
 
-     - name: Executing Shell Script
-       run: |
-         chmod +x ascii-script.sh
-         ./ascii-script.sh
+    - name: Executing Shell Script
+      run: |
+        chmod +x ascii-script.sh
+        ./ascii-script.sh
